@@ -2,7 +2,6 @@ import React from "react";
 import { getServerSession } from "next-auth";
 import { redirect } from "next/navigation";
 import Link from "next/link";
-import { FcDataSheet } from "react-icons/fc";
 
 const Dashboard = async () => {
 	const session = await getServerSession();
@@ -16,7 +15,7 @@ const Dashboard = async () => {
 			<h1 className='flex flex-col items-center justify-between p-20'>
 				Dashboard
 			</h1>
-			<div className='bg-[#838080] p-10 rounded shadow-md gap-4'></div>
+			{/* <div className='bg-[#838080] p-10 rounded shadow-md gap-4'></div> */}
 			<div className='grid grid-cols-2 gap-4'>
 				<div className='bg-[#838080] p-10 rounded shadow-md'>
 					<img
@@ -26,7 +25,7 @@ const Dashboard = async () => {
 					/>
 					<Link
 						className='block text-center text-black hover:underline mt-2'
-						href='/gas sensor'>
+						href='/gas_sensor'>
 						Gas Sensor
 					</Link>
 				</div>
@@ -38,7 +37,7 @@ const Dashboard = async () => {
 					/>
 					<Link
 						className='block text-center text-black hover:underline mt-2'
-						href='/TH sensor'>
+						href='/th_sensor'>
 						TH Sensor
 					</Link>
 				</div>
@@ -63,7 +62,7 @@ const Dashboard = async () => {
 
 					<Link
 						className='block text-center text-black hover:underline mt-2'
-						href='/data-chart'>
+						href='/data_chart'>
 						Data Chart
 					</Link>
 				</div>
